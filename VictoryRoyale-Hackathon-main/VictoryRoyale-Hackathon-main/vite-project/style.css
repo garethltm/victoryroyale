@@ -1,0 +1,136 @@
+body {
+  display: flex;
+  outline: 1px solid black;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #b1fab1; 
+  padding: 0;
+  overflow: hidden;
+}
+
+.racetrack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 42vh;
+  background-color: #b1fab1; 
+  /* outline: 1px black solid; */
+  overflow: visible;
+  margin-bottom: 20px;
+  z-index: -1;
+  margin-top: 65px;
+}
+
+.finish-line {
+  position: absolute;
+  top: 24%;
+  width: 35px;
+  height: 126%;
+  right: 30px; 
+  z-index: 0; 
+  background-image: url('./public/finish-line.jpeg'); 
+  background-repeat: repeat;
+  background-size: 500%;
+  background-color: black;
+}
+  
+.top-post {
+  position: relative;
+  width: 100vw;
+  height: 3%;
+  background-color: white;
+  top: 16% ;
+}
+
+.lanes {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 100%;
+  right: 1%;
+}
+
+.lane {
+  height: 3%;
+  background-color: #999;
+  margin-bottom: 4.9%; 
+}
+
+.lane1 { top: 20%; }
+.lane2 { top: 40%; }
+.lane3 { top: 60%; }
+.lane4 { top: 80%; }
+.lane5  {top:90%;}
+
+.dots-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.dot {
+  width: 155px;
+  height: 155px;
+  /* border-radius: 50%; */
+  position: absolute;
+  transition: left 0.5 ease;
+  z-index: 10;
+}
+
+.dot img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 50%; */
+}
+
+/* Can be modified */
+#dot1 { top: 1%; }
+#dot2 { top: 30%;}
+#dot3 { top: 54%; }
+#dot4 { top: 81%; }
+
+.button-bet-container {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.button-bet-container button {
+  padding: 20px;
+  border-radius: 70px;
+  border-style: none;
+  background-color: rgb(27, 170, 98);
+  color: white; 
+}
+
+.leaderboard {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column; /* Display the leaderboard items vertically */
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.leaderboard-item {
+  margin: 5px;
+}
+
+.message {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #333;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Straight Racetrack Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="button-bet-container">
+      <!--THE INPUT FOR USER-->
+      <div
+        style="margin-right: 60px; font-family: Arial, Helvetica, sans-serif"
+      >
+        <div style="display: flex; flex-direction: column">
+          How much do you want to bet?
+          <input type="number" id="bid_amount" />
+          <label for="racer">Choose a racer:</label>
+
+          <select name="racers" id="racer">
+            <option value="0">Racer 1</option>
+            <option value="1">Racer 2</option>
+            <option value="2">Racer 3</option>
+            <option value="3">Racer 4</option>
+          </select>
+        </div>
+      </div>
+      <button class="start-button" onclick="startRace()">Start Race</button>
+      <button class="reset-button" onclick="resetRace()">Reset Race</button>
+    </div>
+
+    <div class="racetrack">
+      <div class="lanes">
+        <div class="lane lane1"></div>
+        <div class="lane lane2"></div>
+        <div class="lane lane3"></div>
+        <div class="lane lane4"></div>
+        <div class="lane lane5"></div>
+      </div>
+      <div class="dots-container">
+        <img src="./public/roman-era/roman.png" class="dot" id="dot1" />
+        <img src="./public/egypt-era/egypt.png" class="dot" id="dot2" />
+        <img src="./public/caveman-era/caveman.png" class="dot" id="dot3" />
+        <img src="./public/egypt-era/egypt.png" class="dot" id="dot4" />
+      </div>
+      <div class="finish-line"></div>
+    </div>
+
+    <div class="leaderboard" id="leaderboard">
+      <div class="leaderboard-text">Leaderboard</div>
+      <div class="leaderboard-item" id="leaderboard-dot1">Dot 1</div>
+      <div class="leaderboard-item" id="leaderboard-dot2">Dot 2</div>
+      <div class="leaderboard-item" id="leaderboard-dot3">Dot 3</div>
+      <div class="leaderboard-item" id="leaderboard-dot4">Dot 4</div>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

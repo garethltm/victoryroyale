@@ -1,0 +1,29 @@
+@font-face {
+    font-family: SourceCodePro;
+    src: url(./assets/SourceCodePro-VariableFont_wght.ttf);
+}
+body {
+    margin: 0px;
+    font-family: SourceCodePro;
+    background-color: antiquewhite;
+}
+.spec {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.specs.animated {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
